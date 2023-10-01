@@ -21,6 +21,8 @@ const authUser = asyncHandler(async (req, res) => {
     res.cookie("user", generateToken(userExists._id), {
       httpOnly: true,
       maxAge: 30 * 24 * 60 * 60 * 1000,
+      sameSite: 'None', 
+      path: '/', 
     });
     res.status(201).json({
       _id: userExists._id,

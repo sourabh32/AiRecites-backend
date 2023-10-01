@@ -19,7 +19,7 @@ const authUser = asyncHandler(async (req, res) => {
   );
   if (authenticatePassword) {
     res.cookie("user", generateToken(userExists._id), {
-      
+      httpOnly:true,
       maxAge: 30 * 24 * 60 * 60 * 1000,
       sameSite: 'None', 
       secure:true,

@@ -22,6 +22,7 @@ const authUser = asyncHandler(async (req, res) => {
       
       maxAge: 30 * 24 * 60 * 60 * 1000,
       sameSite: 'None', 
+      secure:true,
       path: '/', 
     });
     res.status(201).json({
@@ -60,6 +61,7 @@ const registerUser = asyncHandler(async (req, res) => {
       httpOnly: true,
       maxAge: 30 * 24 * 60 * 60 * 1000,
       sameSite: 'None', 
+      secure:true,
       path: '/', 
     });
     res.status(201).json({

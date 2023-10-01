@@ -15,7 +15,7 @@ connectDb()
 const app = express()
 app.use(cookieParser())
 app.use(cors({
-    origin: 'https://airecites-frontend.vercel.app/', 
+    origin: 'https://airecites-frontend.vercel.app', 
     credentials: true, 
   }))
 

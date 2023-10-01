@@ -29,9 +29,11 @@ const authUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(401);
-    throw new Error("Pssword do not match");
+    throw new Error("Password do not match");
   }
 });
+
+
 const registerUser = asyncHandler(async (req, res) => {
   console.log(req.body);
   const { email, name, password } = req.body;

@@ -13,11 +13,11 @@ const port  = process.env.PORT || 4000
 
 connectDb()
 const app = express()
-app.use(cors({
-  origin:"https://airecites-frontend.vercel.app"
-}));
 app.use(cookieParser())
-
+app.use(cors({
+    origin: 'https://airecites-frontend.vercel.app', 
+    credentials: true, 
+  }))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

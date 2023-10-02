@@ -5,7 +5,7 @@ import { protect } from "../middleware/authMiddleware.js"
 
 const router = express.Router()
 
-router.post("/generatestory",protect,generateStoryController)
+router.post("/generatestory",generateStoryController)
 router.get("/getuserstories",protect,getUserStories)
 router.get("/feed",protect,getFeedStories)
 router.get("/leaderboard",protect,getLeaderBoard)

@@ -14,9 +14,11 @@ const port  = process.env.PORT || 4000
 connectDb()
 const app = express()
 app.use(cors({
-  origin:"*",
-  credentials:true
-}))
+  origin: "*",
+  credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  headers: "Origin, X-Requested-With, Content-Type, Accept",
+}));
 
 app.use(cookieParser())
 

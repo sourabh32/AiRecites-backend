@@ -7,8 +7,8 @@ const router = express.Router()
 
 router.post("/generatestory",generateStoryController)
 router.get("/getuserstories",protect,getUserStories)
-router.get("/feed",protect,getFeedStories)
-router.get("/leaderboard",protect,getLeaderBoard)
+router.get("/feed",getFeedStories)
+router.get("/leaderboard",getLeaderBoard)
 router.post("/upvotestory",protect,upvoteStory)
 
 
